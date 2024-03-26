@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Ahmed Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gray-100">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+                <h2 class="text-2xl font-bold text-gray-900">Ahmed Shopping Cart</h2>
+                <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                    <!-- First Item -->
+                    <div class="group relative flex flex-col items-center">
+                        <div class="flex justify-center">
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded  cursor-pointer " class="delete-btn"  onclick="deleteItem(this)">
+                                X
+                            </button>
+                        </div>
+                        <div>
+                            <button><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1  sm:h-96">
+                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/871ea72c-a2f4-493c-a6f4-3be31a86c73b/chaussure-air-force-1-07-pour-QMx6sn.png" class="h-full w-full object-cover object-center">>
+                                
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <h3 class="text-lg font-bold">Nike AirFlex: <span id="s1" class="text-blue-500">500</span>DT</h3>
+                            <button id="p1" onclick="plusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer ml-4">+</button>
+                            <p id="q1" class="mx-2">0</p>
+                            <button id="m1" onclick="minusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">-</button>
+                            <div>
+                          </div>
+                              
+                        </div>
+                        <p>Total price for this product = <span id="t1">0</span></p>
+                    </div>
+                    <!-- Second Item -->
+                    <div class="group relative flex flex-col items-center">
+                      <div class="group relative flex flex-col items-center">
+                        <div class="flex justify-center">
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded  cursor-pointer " class="delete-btn"  onclick="deleteItem(this)">
+                                X
+                            </button>
+                        </div>
+                        <div>
+                            <button><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1  sm:h-96">
+                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/71dcb3f8-76cf-4bae-8fa0-e16bc6f2872c/chaussure-air-max-90-pour-ggrFKJ.png"alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                            class="h-full w-full object-cover object-center">>
+                                
+                            
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <h3 class="text-lg font-bold">Nike FlexStride: <span id="s2" class="text-blue-500">990</span>DT</h3>
+                            <button id="p2" onclick="plusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer ml-4">+</button>
+                            <p id="q2" class="mx-2">0</p>
+                            <button id="m2" onclick="minusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">-</button>
+                        </div>
+                        <p>Total price for this product = <span id="t2">0</span></p>
+                    </div>
+                 
+                    </div>
+                    <!-- Third Item -->
+                    <div class="group relative flex flex-col items-center">
+                      <div class="group relative flex flex-col items-center">
+                        <div class="flex justify-center">
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded  cursor-pointer" id="delete-btn" onclick="deleteItem(this)">
+                                X
+                            </button>
+                        </div>
+                        <div>
+                            <button><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                        <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1  sm:h-96">
+                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a3e7dead-1ad2-4c40-996d-93ebc9df0fca/chaussure-dunk-low-retro-pour-wwlDHh.png" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                            class="h-full w-full object-cover object-center">>
+                                
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <h3 class="text-lg font-bold">Nike AirStrut: <span id="s3" class="text-blue-500">690</span>DT</h3>
+                            <button id="p3" onclick="plusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer ml-4">+</button>
+                            <p id="q3" class="mx-3">0</p>
+                            <button id="m3" onclick="minusClick(this.id)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">-</button>
+                        </div>
+                        <p>Total price for this product = <span id="t3">0</span></p>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <div class="text-center sm:h-96"> <p> <strong>Total Price of all products = </strong> <span  id="totalP">0</span></p>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded  cursor-pointer">Buy</button>
+    
+
+    <script src="main.js"></script>
+</body>
+
+</html>
